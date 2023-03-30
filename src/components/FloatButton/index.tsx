@@ -1,10 +1,14 @@
 import { Plus } from '../../Icons';
 import { ButtonContainer, RoundedButton } from './styles';
 
-export function FloatButton() {
+interface Props {
+  onClick?: () => void;
+}
+
+export function FloatButton({ onClick }: Props) {
   return (
     <ButtonContainer>
-      <RoundedButton>
+      <RoundedButton onPress={onClick}>
         <Plus />
       </RoundedButton>
     </ButtonContainer>
